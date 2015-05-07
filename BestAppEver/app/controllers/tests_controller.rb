@@ -2,11 +2,11 @@ class TestsController < ApplicationController
 
 
   def index
-  	#James
+  	@test = Test.all
   end
 
   def show
-  	#James
+  	@test = Test.find(params[:id])
   end
 
   def edit
