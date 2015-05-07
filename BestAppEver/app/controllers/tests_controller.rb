@@ -9,10 +9,12 @@ class TestsController < ApplicationController
   end
 
   def edit
-  	#Julia
+    @test = Test.find( params[:id] )
   end
+
   def update
-  	#Julia
+  	@test = Test.find( params[:id] )
+    test.update(test_params)
   end
 
   def new
@@ -20,6 +22,10 @@ class TestsController < ApplicationController
   end
   def create
   	#Jake
+  end
+
+  def test_params
+    params.require(:test).permit(:name)
   end
 
 
