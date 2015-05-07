@@ -2,15 +2,17 @@ class TestsController < ApplicationController
 
 
   def index
-  	#James
+  	@test = Test.all
   end
+
   def show
-  	#James
+  	@test = Test.find(params[:id])
   end
 
   def edit
   	#Julia
   end
+
   def update
   	#Julia
   end
@@ -18,6 +20,7 @@ class TestsController < ApplicationController
   def new
   	#Jake
   end
+
   def create
   	#Jake
   end
